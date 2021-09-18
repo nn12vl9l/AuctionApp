@@ -28,7 +28,7 @@
     {{-- <a href="/items/{{ $item->id }}/edit">編集する</a> --}}
     <button type="button" onclick="location.href='/items/{{ $item->id }}/edit'">編集する</button>
     <input type="submit" value="削除する" onclick="if(!confirm('本当に削除しますか？')){return false}" form="delete-form">
-    <form action="/item/{{ $item->id }}" method="post" id='delete-form'>
+    <form action="/items/{{ $item->id }}" method="post" id='delete-form'>
     @csrf
     @method('DELETE')
     </form>
